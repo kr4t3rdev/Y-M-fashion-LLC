@@ -1,17 +1,11 @@
 import Link from "next/link";
 import { auth } from "@/auth";
 import { MobileMenu } from "./mobile-menu";
+import { NavLinks } from "./nav-links";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { CartButton } from "@/components/shop/cart/cart-button";
 import { SignOutButton } from "@/components/auth/sign-out-button";
 import { isStaff } from "@/server/application/roles";
-
-const NAV_LINKS = [
-  { no: "01", href: "/", label: "Inicio" },
-  { no: "02", href: "/catalogo", label: "Catálogo" },
-  { no: "03", href: "/combos", label: "Combos" },
-  { no: "04", href: "/ofertas", label: "Ofertas" },
-];
 
 export async function SiteHeader() {
   const session = await auth();
@@ -46,19 +40,7 @@ export async function SiteHeader() {
           </Link>
         </div>
 
-        <nav className="hidden items-center gap-6 lg:flex" aria-label="Navegación principal">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="group relative flex items-baseline gap-2 py-2 text-sm font-semibold uppercase tracking-[0.08em] text-muted-foreground transition-colors hover:text-foreground"
-            >
-              <span className="slash text-xs">{link.no}</span>
-              <span>{link.label}</span>
-              <span className="absolute -bottom-0.5 left-0 h-0.5 w-0 bg-accent transition-all duration-200 group-hover:w-full" />
-            </Link>
-          ))}
-        </nav>
+        <NavLinks />
 
         <div className="flex items-center gap-1.5">
           <CartButton />

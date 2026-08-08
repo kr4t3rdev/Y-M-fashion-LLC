@@ -55,7 +55,32 @@ export default async function HomePage() {
     <div className="flex flex-col pb-24">
       {/* Hero — el archivo se abre */}
       <section className="relative overflow-hidden border-b-2 border-foreground/15">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-[1.1fr_1fr] md:items-center md:py-24 lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-[1fr_1.1fr] md:items-center md:py-24 lg:px-8">
+          <div className="relative">
+            <div className="absolute -top-3 left-2 z-10 -rotate-2 border-2 border-foreground/20 bg-background px-3 py-1.5">
+              <span className="price text-[0.625rem] text-muted-foreground">Nº {String(1).padStart(3, "0")}</span>
+            </div>
+            <div className="relative aspect-[4/5] overflow-hidden border-2 border-foreground/15">
+              <Image
+                src="/hero-street.jpg"
+                alt="Look streetwear de Y&M Fashion"
+                fill
+                priority
+                sizes="(min-width: 768px) 42vw, 100vw"
+                className="object-cover transition-transform duration-700 hover:scale-[1.03]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 flex items-baseline gap-2 p-5 text-primary-foreground">
+                <span className="brand-display text-3xl italic sm:text-4xl">YM</span>
+                <span className="text-xs uppercase tracking-[0.3em] opacity-90">Y&M Fashion LLC</span>
+              </div>
+            </div>
+            <div className="mt-3 flex items-baseline justify-between">
+              <p className="tag-no">Edición {new Date().getFullYear()} · Portada del archivo</p>
+              <span className="price text-[0.625rem] text-accent">REF. YM-001</span>
+            </div>
+          </div>
+
           <div>
             <div className="mb-6 flex items-baseline gap-3">
               <span className="price text-[0.6875rem] font-medium text-accent">CAT-2026</span>
@@ -87,31 +112,6 @@ export default async function HomePage() {
               >
                 Ver ofertas
               </Link>
-            </div>
-          </div>
-
-          <div className="relative">
-            <div className="absolute -top-3 right-2 z-10 rotate-2 border-2 border-foreground/20 bg-background px-3 py-1.5">
-              <span className="price text-[0.625rem] text-muted-foreground">Nº {String(1).padStart(3, "0")}</span>
-            </div>
-            <div className="relative aspect-[4/5] overflow-hidden border-2 border-foreground/15">
-              <Image
-                src="/hero-fashion.jpg"
-                alt="Modelo vistiendo moda editorial de Y&M Fashion"
-                fill
-                priority
-                sizes="(min-width: 768px) 45vw, 100vw"
-                className="object-cover transition-transform duration-700 hover:scale-[1.03]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent" />
-              <div className="absolute bottom-0 left-0 flex items-baseline gap-2 p-5 text-primary-foreground">
-                <span className="brand-display text-3xl italic sm:text-4xl">YM</span>
-                <span className="text-xs uppercase tracking-[0.3em] opacity-90">Y&M Fashion LLC</span>
-              </div>
-            </div>
-            <div className="mt-3 flex items-baseline justify-between">
-              <p className="tag-no">Edición {new Date().getFullYear()} · Portada del archivo</p>
-              <span className="price text-[0.625rem] text-accent">REF. YM-001</span>
             </div>
           </div>
         </div>
