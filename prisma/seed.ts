@@ -757,7 +757,7 @@ async function main() {
   const adminPassword = process.env.ADMIN_PASSWORD ?? "admin1234";
   await prisma.user.upsert({
     where: { email: "admin@cesarfashion.com" },
-    update: {},
+    update: { password: hashPassword(adminPassword) },
     create: {
       email: "admin@cesarfashion.com",
       name: "Cesar Admin",
@@ -769,7 +769,7 @@ async function main() {
   const gestorPassword = process.env.GESTOR_PASSWORD ?? "gestor1234";
   await prisma.user.upsert({
     where: { email: "gestor@cesarfashion.com" },
-    update: {},
+    update: { password: hashPassword(gestorPassword) },
     create: {
       email: "gestor@cesarfashion.com",
       name: "Gestor Tienda",
