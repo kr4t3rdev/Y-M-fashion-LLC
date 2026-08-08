@@ -32,7 +32,7 @@ export function AddToCartButton({ item, label, className }: AddToCartButtonProps
       aria-live="polite"
       title={disabled ? "Sin stock" : label ?? "Añadir al carrito"}
       className={cn(
-        "inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-background/95 text-foreground shadow-sm backdrop-blur transition-all",
+        "inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-background/95 text-foreground backdrop-blur transition-all",
         label
           ? "h-12 rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow-xs hover:bg-primary/90 disabled:pointer-events-none disabled:opacity-50"
           : "size-10 border border-foreground/10 hover:border-accent/50 hover:bg-accent hover:text-accent-foreground disabled:pointer-events-none disabled:opacity-40",

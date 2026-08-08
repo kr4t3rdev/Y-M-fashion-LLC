@@ -167,13 +167,18 @@ export function SiteFooter() {
           ))}
         </div>
 
+        {/* Newsletter */}
+        <div className="mt-10 border-t-2 border-hairline pt-10">
+          <NewsletterForm />
+        </div>
+
         {/* Barra final */}
         <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t-2 border-hairline pt-8 sm:flex-row">
           <p className="tag-no">
             © {new Date().getFullYear()} Y&M Fashion LLC. Todos los derechos reservados.
           </p>
           <p className="tag-no">
-            Curation, archive & code <span className="slash">/</span> kr4t3r<span className="text-red text-accent">dev</span> 
+            Curation, archive & code <span className="slash">/</span> kr4t3rdev
           </p>
         </div>
       </div>
