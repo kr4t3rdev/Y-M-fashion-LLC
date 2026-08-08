@@ -45,7 +45,7 @@ export default async function CatalogoPage() {
           <span className="price text-[0.6875rem] font-medium text-accent">ARCHIVO</span>
           <span className="h-px flex-1 bg-hairline" aria-hidden />
         </div>
-        <h1 className="mt-3 font-display text-4xl font-medium tracking-tight sm:text-5xl">Catálogo</h1>
+        <h1 className="brand-display mt-3 text-5xl text-foreground sm:text-6xl">Catálogo</h1>
         <p className="mt-3 max-w-md text-muted-foreground">
           {availableCount} {availableCount === 1 ? "pieza disponible" : "piezas disponibles"} en inventario,
           organizadas por categoría.

@@ -216,9 +216,34 @@ html.dark {
     letter-spacing: -0.01em;
     text-transform: uppercase;
   }
+  /* Marca condensada gigante — headline streetwear */
+  .brand-display {
+    font-family: var(--font-archivo);
+    font-stretch: 60%;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    line-height: 0.9;
+  }
   /* Price-tag mono */
   .price {
     font-family: var(--font-mono);
     font-variant-numeric: tabular-nums;
+  }
+  /* Marcador slash — separador editorial */
+  .slash {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    color: var(--accent);
+  }
+  /* Título de sección con numeral grande */
+  .section-no {
+    font-family: var(--font-archivo);
+    font-stretch: 60%;
+    font-weight: 800;
+    font-size: 1.75rem;
+    line-height: 1;
+    color: var(--muted-foreground);
+    opacity: 0.55;
   }
 }

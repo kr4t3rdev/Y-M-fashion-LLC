@@ -21,7 +21,7 @@ export default async function OfertasPage() {
             <span className="text-[0.625rem] uppercase tracking-widest text-accent">Ofertas activas</span>
           </span>
         </div>
-        <h1 className="mt-3 font-display text-4xl font-medium tracking-tight sm:text-5xl">Ofertas</h1>
+        <h1 className="brand-display mt-3 text-5xl text-foreground sm:text-6xl">Ofertas</h1>
         <p className="mt-3 max-w-md text-muted-foreground">
           Piezas seleccionadas con descuentos exclusivos, disponibles por tiempo limitado.
         </p>

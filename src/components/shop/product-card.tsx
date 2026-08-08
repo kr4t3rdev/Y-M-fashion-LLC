@@ -14,10 +14,10 @@ export function ProductCard({ product }: { product: ProductEntity }) {
   const unitPrice = productEffectivePrice(product);
 
   return (
-    <article className="group relative flex flex-col overflow-hidden border border-hairline bg-card transition-colors hover:border-foreground/25">
+    <article className="group relative flex flex-col overflow-hidden border-2 border-hairline bg-card transition-colors hover:border-foreground/40">
       <div className="flex items-baseline justify-between border-b border-hairline px-3 py-2">
         <span className="price text-[0.625rem] text-accent">
-          FICHA {product.id.slice(0, 4).toUpperCase()}
+          FICHA <span className="slash">/</span> {product.id.slice(0, 4).toUpperCase()}
         </span>
         <span className="price text-[0.625rem] text-muted-foreground">{product.category}</span>
       </div>
