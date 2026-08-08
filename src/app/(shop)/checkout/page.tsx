@@ -5,7 +5,7 @@ import { CheckoutGate } from "@/components/shop/checkout-gate";
 import { isActiveUser } from "@/server/application/roles";
 
 export const metadata: Metadata = {
-  title: "Finalizar pedido — Cesar Fashion",
+  title: "Finalizar pedido — Y&M Fashion",
 };
 
 export default async function CheckoutPage() {

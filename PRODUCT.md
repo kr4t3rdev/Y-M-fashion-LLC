@@ -1,11 +1,11 @@
-# Cesar Fashion LLC — Producto
+# Y&M Fashion LLC — Producto
 
 ## Qué es
-Tienda virtual de moda de Cesar Fashion LLC. Una boutique editorial online donde un administrador gestiona el inventario y los clientes compran piezas seleccionadas de alta calidad.
+Tienda virtual de moda de Y&M Fashion LLC. Una boutique editorial online donde un administrador gestiona el inventario y los clientes compran piezas seleccionadas de alta calidad.
 
 ## Audiencia
 - **Clientes**: personas que valoran la moda como declaración personal; compran ropa de calidad con curaduría. Idioma: español (mercado LATAM).
-- **Administrador**: Cesar (propietario único) gestiona productos, stock, ofertas y precios desde un dashboard.
+- **Administrador**: el gestor de Y&M Fashion LLC gestiona productos, stock, ofertas y precios desde un dashboard.
 
 ## Mecanismo central
 Un catálogo curado de piezas de moda donde cada producto puede tener: categoría, precio, precio de oferta, stock, etiqueta de oferta y estado "destacado". El admin controla el inventario en tiempo real; los clientes navegan por catálogo y ofertas.

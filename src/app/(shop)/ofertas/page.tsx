@@ -14,11 +14,14 @@ export default async function OfertasPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
       <div className="mb-10">
-        <p className="mb-2 inline-flex items-center gap-2 rounded-full border border-accent/30 px-3 py-1 text-xs font-medium uppercase tracking-widest text-accent">
-          <Tag className="size-3.5" />
-          Ofertas activas
-        </p>
-        <h1 className="mt-2 font-display text-4xl font-semibold tracking-tight sm:text-5xl">Ofertas</h1>
+        <div className="flex items-baseline gap-3">
+          <span className="price text-[0.6875rem] font-medium text-accent">OFF</span>
+          <span className="inline-flex items-center gap-1.5 border border-accent/30 px-2 py-0.5">
+            <Tag className="size-3 text-accent" />
+            <span className="text-[0.625rem] uppercase tracking-widest text-accent">Ofertas activas</span>
+          </span>
+        </div>
+        <h1 className="mt-3 font-display text-4xl font-medium tracking-tight sm:text-5xl">Ofertas</h1>
         <p className="mt-3 max-w-md text-muted-foreground">
           Piezas seleccionadas con descuentos exclusivos, disponibles por tiempo limitado.
         </p>

@@ -41,20 +41,23 @@ export default async function CatalogoPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
       <div className="mb-10">
-        <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Colección completa</p>
-        <h1 className="mt-2 font-display text-4xl font-semibold tracking-tight sm:text-5xl">Catálogo</h1>
+        <div className="flex items-baseline gap-3">
+          <span className="price text-[0.6875rem] font-medium text-accent">ARCHIVO</span>
+          <span className="h-px flex-1 bg-hairline" aria-hidden />
+        </div>
+        <h1 className="mt-3 font-display text-4xl font-medium tracking-tight sm:text-5xl">Catálogo</h1>
         <p className="mt-3 max-w-md text-muted-foreground">
           {availableCount} {availableCount === 1 ? "pieza disponible" : "piezas disponibles"} en inventario,
           organizadas por categoría.
         </p>
       </div>
 
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-px border border-hairline bg-hairline">
         {[...grouped.keys()].map((category) => (
           <a
             key={category}
             href={`#${category}`}
-            className="rounded-full border px-4 py-1.5 text-sm text-muted-foreground transition-colors hover:border-foreground hover:text-foreground"
+            className="bg-background px-4 py-2 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
           >
             {category}
           </a>
@@ -64,15 +67,15 @@ export default async function CatalogoPage() {
       <div className="mt-14 space-y-16">
         {[...grouped.entries()].map(([category, items]) => (
           <section key={category} id={category} className="scroll-mt-24">
-            <div className="mb-6 flex items-end justify-between border-b pb-4">
+            <div className="mb-6 flex items-end justify-between border-b border-hairline pb-4">
               <div>
-                <h2 className="font-display text-2xl font-semibold tracking-tight sm:text-3xl">{category}</h2>
+                <h2 className="font-display text-2xl font-medium tracking-tight sm:text-3xl">{category}</h2>
                 <p className="mt-1 text-sm text-muted-foreground">
                   {CATEGORY_DESCRIPTIONS[category] ?? "Descubre nuestra selección"}
                 </p>
               </div>
-              <span className="text-sm tabular-nums text-muted-foreground">
-                {items.length} {items.length === 1 ? "artículo" : "artículos"}
+              <span className="price text-sm text-muted-foreground">
+                {items.length} {items.length === 1 ? "FICHA" : "FICHAS"}
               </span>
             </div>
             <ProductGrid products={items} />

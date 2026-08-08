@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { RegisterForm } from "@/components/auth/register-form";
 
 export const metadata: Metadata = {
-  title: "Crear cuenta — Cesar Fashion",
+  title: "Crear cuenta — Y&M Fashion",
 };
 
 export default function RegisterPage() {
@@ -10,12 +10,15 @@ export default function RegisterPage() {
     <div className="flex min-h-[70vh] items-center justify-center px-4">
       <div className="w-full max-w-sm">
         <div className="mb-8 text-center">
-          <p className="font-display text-3xl font-semibold tracking-tight">
-            Cesar Fashion <span className="text-accent">LLC</span>
-          </p>
-          <p className="mt-2 text-sm text-muted-foreground">Crea tu cuenta para finalizar pedidos</p>
+          <div className="mx-auto mb-3 flex items-baseline justify-center gap-2">
+            <span className="brand text-3xl">Y&M</span>
+            <span className="font-display text-base uppercase tracking-[0.2em] text-muted-foreground">
+              Fashion LLC
+            </span>
+          </div>
+          <p className="mt-3 text-sm text-muted-foreground">Crea tu cuenta para finalizar pedidos</p>
         </div>
-        <div className="rounded-xl border bg-card p-6 shadow-sm">
+        <div className="border border-hairline bg-card p-6 shadow-sm">
           <RegisterForm />
         </div>
         <p className="mt-4 text-center text-xs text-muted-foreground">

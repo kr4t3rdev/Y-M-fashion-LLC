@@ -5,10 +5,10 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
-  { href: "/", label: "Inicio" },
-  { href: "/catalogo", label: "Catálogo" },
-  { href: "/combos", label: "Combos" },
-  { href: "/ofertas", label: "Ofertas" },
+  { no: "01", href: "/", label: "Inicio" },
+  { no: "02", href: "/catalogo", label: "Catálogo" },
+  { no: "03", href: "/combos", label: "Combos" },
+  { no: "04", href: "/ofertas", label: "Ofertas" },
 ];
 
 export function MobileMenu() {
@@ -20,24 +20,34 @@ export function MobileMenu() {
         onClick={() => setOpen(!open)}
         aria-label={open ? "Cerrar menú" : "Abrir menú"}
         aria-expanded={open}
-        className="rounded-md p-2.5 transition-colors hover:bg-secondary"
+        className="rounded-md border border-border p-2.5 text-muted-foreground transition-colors hover:border-accent/50 hover:text-accent"
       >
-        {open ? <X className="size-5" /> : <Menu className="size-5" />}
+        {open ? <X className="size-4" /> : <Menu className="size-4" />}
       </button>
       {open && (
-        <nav className="absolute left-0 top-16 z-50 w-full border-b bg-background/95 px-4 py-4 backdrop-blur-md">
-          <div className="flex flex-col gap-1">
+        <nav
+          aria-label="Menú"
+          className="absolute left-0 right-0 top-16 z-50 border-b border-hairline bg-background/95 backdrop-blur-md"
+        >
+          <ul className="mx-auto flex max-w-7xl flex-col px-4 py-4 sm:px-6">
             {NAV_LINKS.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className="rounded-md px-3 py-2.5 text-base font-medium transition-colors hover:bg-secondary"
-              >
-                {link.label}
-              </Link>
+              <li key={link.href} className="border-b border-hairline last:border-0">
+                <Link
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className="flex items-baseline justify-between gap-3 py-4"
+                >
+                  <span className="flex items-baseline gap-3">
+                    <span className="price text-xs text-accent">{link.no}</span>
+                    <span className="font-display text-lg font-medium tracking-tight">
+                      {link.label}
+                    </span>
+                  </span>
+                  <span className="tag-no">↗</span>
+                </Link>
+              </li>
             ))}
-          </div>
+          </ul>
         </nav>
       )}
     </div>

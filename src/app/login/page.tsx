@@ -24,12 +24,15 @@ export default async function LoginPage() {
           Volver a la tienda
         </Link>
         <div className="mb-8 text-center">
-          <p className="font-display text-3xl font-semibold tracking-tight">
-            Cesar Fashion <span className="text-accent">LLC</span>
-          </p>
-          <p className="mt-2 text-sm text-muted-foreground">Inicia sesión en tu cuenta</p>
+          <div className="mx-auto mb-3 flex items-baseline justify-center gap-2">
+            <span className="brand text-3xl">Y&M</span>
+            <span className="font-display text-base uppercase tracking-[0.2em] text-muted-foreground">
+              Fashion LLC
+            </span>
+          </div>
+          <p className="mt-3 text-sm text-muted-foreground">Accede al archivo · Inicia sesión en tu cuenta</p>
         </div>
-        <div className="rounded-xl border bg-card p-6 shadow-sm">
+        <div className="border border-hairline bg-card p-6 shadow-sm">
           <LoginForm />
         </div>
         <p className="mt-4 text-center text-xs text-muted-foreground">

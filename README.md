@@ -1,4 +1,4 @@
-# Cesar Fashion LLC
+# Y&M Fashion LLC
 
 Tienda virtual de moda editorial. Catalogo curado con dashboard admin para gestionar productos, ofertas e inventario.
 

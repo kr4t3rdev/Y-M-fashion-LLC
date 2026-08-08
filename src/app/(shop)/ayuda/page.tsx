@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import { ArrowRight, CreditCard, MessageCircle, ShieldCheck, Truck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Ayuda — Cesar Fashion",
+  title: "Ayuda — Y&M Fashion",
   description:
-    "Resolvemos tus dudas: cómo comprar, cómo finalizar tu pedido y cómo funcionan los envíos y entregas de Cesar Fashion.",
+    "Resolvemos tus dudas: cómo comprar, cómo finalizar tu pedido y cómo funcionan los envíos y entregas de Y&M Fashion.",
 };
 
 const WHATSAPP_URL = "https://wa.me/17372689835";
@@ -89,7 +89,7 @@ export default function AyudaPage() {
           Centro de ayuda
         </h1>
         <p className="mt-3 max-w-md text-muted-foreground">
-          Todo lo que necesitas saber para comprar con confianza en Cesar Fashion.
+          Todo lo que necesitas saber para comprar con confianza en Y&M Fashion.
         </p>
       </div>
 
@@ -118,7 +118,7 @@ export default function AyudaPage() {
               Cómo comprar
             </h2>
             <p className="mt-2 max-w-lg text-muted-foreground">
-              Comprar en Cesar Fashion es sencillo: eliges tus piezas, confirmas tu pedido y
+              Comprar en Y&M Fashion es sencillo: eliges tus piezas, confirmas tu pedido y
               coordinamos la entrega contigo.
             </p>
             <div className="mt-8">
