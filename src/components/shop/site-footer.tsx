@@ -173,7 +173,7 @@ export function SiteFooter() {
             © {new Date().getFullYear()} Y&M Fashion LLC. Todos los derechos reservados.
           </p>
           <p className="tag-no">
-            Curation, archive & code <span className="slash">/</span> kr4t3r<span className="bg-accent text-background text-red">dev</span> 
+            Curation, archive & code <span className="slash">/</span> kr4t3r<span className="bg-accent text-red">dev</span> 
           </p>
         </div>
       </div>
