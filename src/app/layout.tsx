@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import { Archivo, Newsreader, JetBrains_Mono } from "next/font/google";
+import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
+import { extractRouterConfig } from "uploadthing/server";
+import { uploadRouter } from "@/server/uploadthing/router";
+import "@uploadthing/react/styles.css";
 import "./globals.css";
 
 const archivo = Archivo({
@@ -57,6 +61,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           FINISH: unreviewed and undocumented is unfinished; this build ends with the
           finish review, the verdict, and DESIGN.md.
         */}
+        <NextSSRPlugin routerConfig={extractRouterConfig(uploadRouter)} />
         {children}
       </body>
     </html>
