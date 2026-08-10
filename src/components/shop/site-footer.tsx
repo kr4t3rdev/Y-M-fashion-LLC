@@ -167,11 +167,6 @@ export function SiteFooter() {
           ))}
         </div>
 
-        {/* Newsletter */}
-        <div className="mt-10 border-t-2 border-hairline pt-10">
-          <NewsletterForm />
-        </div>
-
         {/* Barra final */}
         <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t-2 border-hairline pt-8 sm:flex-row">
           <p className="tag-no">
