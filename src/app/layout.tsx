@@ -3,7 +3,6 @@ import { Archivo, Newsreader, JetBrains_Mono } from "next/font/google";
 import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
 import { extractRouterConfig } from "uploadthing/server";
 import { uploadRouter } from "@/server/uploadthing/router";
-import "@uploadthing/react/styles.css";
 import "./globals.css";
 
 const archivo = Archivo({
