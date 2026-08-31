@@ -29,6 +29,17 @@ export const metadata: Metadata = {
   },
   description:
     "El archivo curado de Y&M Fashion LLC. Moda, belleza, telefonía y aseo, fichados con intención.",
+  openGraph: {
+    title: "Y&M Fashion LLC — Archivo de moda",
+    description:
+      "El archivo curado de Y&M Fashion LLC. Moda, belleza, telefonía y aseo, fichados con intención.",
+    images: ["/hero-fashion.jpg"],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/hero-fashion.jpg"],
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
